@@ -5,5 +5,5 @@ import de.holhar.spring.reactive.streamingstockquoteservice.model.Quote;
 import reactor.core.publisher.Mono;
 
 public interface QuoteHistoryService {
-    Mono<QuoteHistory> saveQuoteToMono(Quote quote);
+    Mono<QuoteHistory> saveQuoteToMongo(Quote quote);
 }

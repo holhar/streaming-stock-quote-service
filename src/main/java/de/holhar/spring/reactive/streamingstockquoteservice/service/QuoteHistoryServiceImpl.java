@@ -14,7 +14,7 @@ public class QuoteHistoryServiceImpl implements QuoteHistoryService {
     private final QuoteHistoryRepository repository;
 
     @Override
-    public Mono<QuoteHistory> saveQuoteToMono(Quote quote) {
+    public Mono<QuoteHistory> saveQuoteToMongo(Quote quote) {
         return repository.save(QuoteHistory.builder()
                 .ticker(quote.getTicker())
                 .price(quote.getPrice())
