@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import reactor.core.publisher.Mono;
 import reactor.rabbitmq.RabbitFlux;
+import reactor.rabbitmq.Receiver;
+import reactor.rabbitmq.ReceiverOptions;
 import reactor.rabbitmq.Sender;
 import reactor.rabbitmq.SenderOptions;
 
@@ -35,5 +37,10 @@ public class RabbitConfig {
     @Bean
     Sender sender(Mono<Connection> mono) {
         return RabbitFlux.createSender(new SenderOptions().connectionMono(mono));
+    }
+
+    @Bean
+    Receiver receiver(Mono<Connection> mono) {
+        return RabbitFlux.createReceiver(new ReceiverOptions().connectionMono(mono));
     }
 }
