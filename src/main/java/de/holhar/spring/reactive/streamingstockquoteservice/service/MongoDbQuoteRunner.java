@@ -3,14 +3,16 @@ package de.holhar.spring.reactive.streamingstockquoteservice.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 
+@Profile("mongodb")
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class QuoteRunner  implements CommandLineRunner {
+public class MongoDbQuoteRunner implements CommandLineRunner {
 
     private final QuoteGeneratorService quoteGeneratorService;
     private final QuoteHistoryService quoteHistoryService;
