@@ -9,6 +9,10 @@ The project was inspired by Brian Clozel's [Webflux Workshop](https://github.com
 
 ```curl http://localhost:8080/quotes -i -H "Accept: application/x-ndjson"```
 
+Run MongoDB in a docker container and expose port 27017
+
+```docker run -d --name sfg-mongo -p 27017:27017 mongo```
+
 ## All Spring Framework Guru Courses
 ### Spring Framework 5
 * [Spring Framework 5: Beginner to Guru](https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=GITHUB_REPO) - Get the most modern and comprehensive course available for the Spring Framework! Join over 8,200 over Guru's in an Slack community exclusive to this course! More than 3,700 students have given this 53 hour course a 5 star review!
